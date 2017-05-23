@@ -1,0 +1,33 @@
+<!-- <form accept-charset="UTF-8" action="/users" method="post">
+<label for="username">Username</label><br>
+<input type="text" name="user[username]" value="<%= @user[:username] %>"><br>
+<label for="email">Email</label><br>
+<input type="text" name="user[email]" value="<%= @user[:email] %>"><br>
+<label for="password">Password</label><br>
+<input type="password" name="user[password]"><br>
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<input type="Submit" value="Submit">
+<form/>
+-->
+
+<!--
+<%= form_tag("/users", method:"post") do %>
+  <%= label_tag(:username, "Username") %><br>
+  <%= text_field_tag(:username) %><br>
+  <%= label_tag(:email, "Email") %><br>
+  <%= text_field_tag(:email) %><br>
+  <%= label_tag(:password, "Password") %><br>
+  <%= password_field_tag(:password) %><br>
+  <%= submit_tag("Submit") %>
+<% end %>
+-->
+
+<%= form_for @user do |f| %>
+  <%= f.label :username %><br>
+  <%= f.text_field :username, autofocus: true, placeholder: "Type your name here"%><br>
+  <%= f.label :email %><br>
+  <%= f.text_field :email, autofocus: true, placeholder: "Type your email here" %><br>
+  <%= f.label :password %><br>
+  <%= f.password_field :password, placeholder: "Type your password here"%><br>
+  <%= f.submit "Submit" %>
+<% end %>
