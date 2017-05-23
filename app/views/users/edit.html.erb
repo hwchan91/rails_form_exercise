@@ -23,6 +23,14 @@
 -->
 
 <%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <ul>
+    <% @user.errors.full_messages.each do |j| %>
+      <li><%= j %></li>
+    <% end %>
+  <% end %>
+  </ul>
+
   <%= f.label :username %><br>
   <%= f.text_field :username, autofocus: true, placeholder: "Type your name here"%><br>
   <%= f.label :email %><br>
