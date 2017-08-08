@@ -2,7 +2,7 @@
 
 This is an exercise for building forms in Rails.
 
-Link to website: https://jumpstartlab-blogger-hwchan91.herokuapp.com/
+Link to website: https://formexercise-hwchan91.herokuapp.com/
 
 
 ## Built With
