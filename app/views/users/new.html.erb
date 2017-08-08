@@ -35,7 +35,7 @@
   <%= f.text_field :username, autofocus: true, placeholder: "Type your name here"%><br>
   <%= f.label :email %><br>
   <%= f.text_field :email, autofocus: true, placeholder: "Type your email here" %><br>
-  <%= f.label :password %><br>
+  <%= f.label :password, "Password(at least 1 number, 1 small letter & 1 capital letter)" %><br>
   <%= f.password_field :password, placeholder: "Type your password here"%><br>
   <%= f.submit "Submit" %>
 <% end %>
